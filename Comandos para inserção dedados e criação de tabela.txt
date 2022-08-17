@@ -1,0 +1,184 @@
+//Comandos para criação de tabela
+
+//create table cliente(
+//idcliente int not null auto_increment,
+//nome varchar(45) not null,
+//numeroCasa varchar(45) not null,
+//cpf decimal(11) not null,
+//e-mail varchar(45) not null,
+//fkEndereco int not null,
+//primary key (idcliente),
+//foreign key (fkEndereco) references endereco (idEndereco));
+
+//Comandos para inserção de dados.
+
+//insert into cliente (nome,e-mail,numeroCasa,cpf,fkEndereco) values ('Marcela Gama','marcela@gmail.com', 302,69854712547,6);
+//insert into cliente (nome,e-mail,numeroCasa,cpf,fkEndereco) values ('Silvana Gama','silvana@gmail.com', 302,25415865745,1);
+//insert into cliente (nome,e-mail,numeroCasa,cpf,fkEndereco) values ('Thomaz','thomaz@gmail.com', 435,58478525750,8);
+//insert into cliente (nome,e-mail,numeroCasa,cpf,fkEndereco) values ('neia','neia@gmail.com', 898,25741872852,3);
+//insert into cliente (nome,e-mail,numeroCasa,cpf,fkEndereco) values ('Maria Eduarda ','mariaduda@gmail.com', 77,98536547825,5);
+//insert into cliente (nome,e-mail,numeroCasa,cpf,fkEndereco) values ('Cassio','cassito@gmail.com', 90,98525875285,2);
+//insert into cliente (nome,e-mail,numeroCasa,cpf,fkEndereco) values ('elisa','elisa@gmail.com', 12564,985365741,7);
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+//Comandos para criação de tabela.
+
+//create table venda(
+//idVenda int not null auto_increment,
+//dataVenda datatime not null,
+//valorTotal varchar(45) not null,
+//fkCliente int not null,
+//primary key (idVenda),
+//foreign key (fkCliente) references cliente(idCliente)),
+
+//Comandos para inserção de dados.
+
+
+//insert into venda (dataVenda,valorTotal,fkCliente) values ('28/01/2020', 58, 2);
+//insert into venda (dataVenda,valorTotal,fkCliente) values ('08/02/2021', 148, 8);
+//insert into venda (dataVenda,valorTotal,fkCliente) values ('04/03/2022', 57, 7);
+//insert into venda (dataVenda,valorTotal,fkCliente) values ('14/04/2022', 25, 3);
+//insert into venda (dataVenda,valorTotal,fkCliente) values ('01/05/2022', 5, 1);
+//insert into venda (dataVenda,valorTotal,fkCliente) values ('19/06/2022', 789, 8);
+//insert into venda (dataVenda,valorTotal,fkCliente) values ('12/07/2022', 58, 5);
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+
+//Comandos para criação da tabla.
+
+//create table endereco(
+//idEndereco int not null auto_increment,
+//logradouro varchar(45) not null,
+//bairro varchar(45) not null,
+//cidade varchar(45) not null,
+//cep varchar(45) not null,
+//primary key (idEndereco));
+
+
+//Comandos para inserção de dados.
+
+//insert into endereco (logradouro,bairro,cidade) values ('sítio','matozin', 'cunha');
+//insert into endereco (logradouro,bairro,cidade) values ('sitio','paraitinga', 'silveiras');
+//insert into endereco (logradouro,bairro,cidade) values ('residencial','Limeira', 'Resende');
+//insert into endereco (logradouro,bairro,cidade) values ('residencial','alphaville', 'resende');
+//insert into endereco (logradouro,bairro,cidade) values ('rua saguadin','pedregulho', 'guaratingueta');
+//insert into endereco (logradouro,bairro,cidade) values ('residencial','Alphaville', 'resende');
+//insert into endereco (logradouro,bairro,cidade) values ('rua maracuja','pedregulho', 'guaratingueta');
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+
+//Comandos para inserção de dados.
+//create table produtos(
+//nome varchar(45) not null,
+//valor  float not null,
+//primary key (idProduto)),
+
+//Comandos para inserção de dados.
+
+
+//insert into produtos (nome, valor) values ('pizza mussarela', 35);
+//insert into produtos (nome, valor) values ('pizza calabresa', 30);
+//insert into produtos (nome, valor) values ('pizza portuguesa', 40);
+//insert into produtos (nome, valor) values ('pizza frango-catupiry', 55);
+//insert into produtos (nome, valor) values ('pizza chocolate', 45);
+//insert into produtos (nome, valor) values ('coca-cola 2litros', 12);
+//insert into produtos (nome, valor) values ('coca-cola 600ml', 7);
+//insert into produtos (nome, valor) values ('coca-cola 350ml', 5);
+//insert into produtos (nome, valor) values ('fanta-uva 350ml', 5);
+//insert into produtos (nome, valor) values ('fanta-laranja 350ml', 5);
+//insert into produtos (nome, valor) values ('suco natural', 6);
+----------------------------------------------------------------------------------------------------------------------------------------------------
+
+//Comandos para criação de tabela.
+
+
+//create table itensVendidos(
+//idItensVendidos int not null auto_increment,
+//fkProduto int not null,
+//fkVenda int not null,
+//quantidade decimal not null,
+//valor float not null,
+//primary key (idItensVendidos),
+//foreign key (fkProduto) references produtos (idProduto),
+//foreign key (fkVenda) references venda (idVenda));
+
+//Comandos para inserção de dados.
+
+//inser into itensVendidos (fkProduto,fkVenda,quantidade,valor) values (8, 2, 5, 89);
+//inser into itensVendidos (fkProduto,fkVenda,quantidade,valor) values (5, 7, 2, 58);
+//inser into itensVendidos (fkProduto,fkVenda,quantidade,valor) values (2, 5, 3, 41);
+//inser into itensVendidos (fkProduto,fkVenda,quantidade,valor) values (7, 1, 2, 75);
+//inser into itensVendidos (fkProduto,fkVenda,quantidade,valor) values (9, 4, 1, 36);
+------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+//Comandos para criação da tabela.
+//create table estoque(
+//nome varchar(45) not null,
+//quantidade decimal not null,
+//quantidadeMininma decimal not null,7
+//custoUnitario float not null,
+//dataCompra datetime not null,
+//primary key (idestoque));
+
+//Comandos para inserção de dados.
+
+
+//insert into estoque (nome,quantidade,quantidadeMinima,custoUnitario) values ('Queijo', 2000, 1000, 130);
+//insert into estoque (nome,quantidade,quantidadeMinima,custoUnitario) values ('Presunto', 1500, 500, 95);
+//insert into estoque (nome,quantidade,quantidadeMinima,custoUnitario) values ('Coca-Cola 2litros', 50, 15, 200);
+//insert into estoque (nome,quantidade,quantidadeMinima,custoUnitario) values ('Coca-Cola 600ml', 50, 15, 140);
+//insert into estoque (nome,quantidade,quantidadeMinima,custoUnitario) values ('Coca-Cola 350ml', 50, 15, 100);
+//insert into estoque (nome,quantidade,quantidadeMinima,custoUnitario) values ('Fanta-Laranja 350ml', 50, 15, 100);
+//insert into estoque (nome,quantidade,quantidadeMinima,custoUnitario) values ('Fanta-Uva 350ml', 50, 15, 100);
+//insert into estoque (nome,quantidade,quantidadeMinima,custoUnitario) values ('Frango', 2000, 1000, 130);
+//insert into estoque (nome,quantidade,quantidadeMinima,custoUnitario) values ('Catupiry', 5000, 200, 85);
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+//Comandos criação de tabela.
+
+//create table itensProdutos(
+//iditensProdutos int not null auto_increment,
+//fkEstoque int not null,
+//fkProduto int not null,
+//quantidade decimal not null,
+//primary key (iditensProdutos),
+//foreign key (fkEstoque) references estoque(idEstoque),
+//foreign key (fkProduto) references produto(idProduto));
+
+//Comandos para inserção de dados.
+
+//inser into itensProdutos (fkEstoque,fkProduto,quantidade) values (7, 8, 50);
+//inser into itensProdutos (fkEstoque,fkProduto,quantidade) values (5, 2, 30);
+//inser into itensProdutos (fkEstoque,fkProduto,quantidade) values (2, 7, 80);
+//inser into itensProdutos (fkEstoque,fkProduto,quantidade) values (9, 4, 100);
+//inser into itensProdutos (fkEstoque,fkProduto,quantidade) values (8, 6, 200);
+--------------------------------------------------------------------------------------------------------------------------------------------
+
+
+//comando para criação de tabela.
+
+//create table telefone(
+//idTelefone int not null auto_increment,
+//numero decimal(9) not null,
+//fkCliente int not null,
+//ddd decimal(2) not null,
+//primary key (idTelefone),
+//foreign key (fkCliente) references cliente(idCliente));
+
+
+//Comandos para inserção de dados.
+
+//insert into telefone (numero,fkCliente,ddd) values (987451254, 5, 12);
+//insert into telefone (numero,fkCliente,ddd) values (974123548, 2, 21);
+//insert into telefone (numero,fkCliente,ddd) values (969852478, 8, 12);
+//insert into telefone (numero,fkCliente,ddd) values (974128455, 9, 11);
+//insert into telefone (numero,fkCliente,ddd) values (965472144, 14, 12);
+-------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
